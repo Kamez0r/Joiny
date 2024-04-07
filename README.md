@@ -132,7 +132,7 @@ _While making this list I noticed Website DS has some kind of unicode character 
 | raw_phone          |                    |               | Google DS specific - pretty phone no? doesnt include prefix`(419) 893-8206`  |
 | phone_country_code | phone_country_code |               | ISO-3166 alpha-2 country code `ro` - referring to phone prefix               |
 |                    | email              |               | Email address `contact@example.com`                                          |
-|                    | domain             | root_domain   | Web adress `example.com`                                                     |
+| domain             | domain             | root_domain   | Web adress `example.com`                                                     |
 |                    | link               |               | URL including protocol (useable as anchor) `http://example.com.au/`          |
 |                    |                    | tld           | Top-Level Domain `au`                                                        |
 |                    |                    | domain_suffix | Web adress ending `com.au`                                                   |
@@ -142,4 +142,21 @@ _While making this list I noticed Website DS has some kind of unicode character 
 |                    | page_type          |               | Facebook DS classification of facebook page type `LocalBusiness`             |
 
 </details>
+
+Looking at the table, we can probably assume it would be easiest to match 
+entities between different data sets on common parameters between all sets.
+That is: _name, category, city, country, region, phone, website_. Of course,
+we should not blindly match them based on equality, as, for example, 2 different
+businesses could be located in the same cities, but be distinct none the less.
+
+Taking all this into consideration, I think we should split the parameters into 2 types:
+- Decisive - parameters that uniquely identify an entity (like `name`)
+- Guiding - parameters that could only guide the decision (like `city` - if we compare 2 entities we 2 different cities, we could perhaps counclude they are different, but the reverse is not true)
+
+Looking at the data, we have to take into consideration one more factor, before starting to develop a solution:
+There are duplicate entries withing the same data set. So it's imperative to first identify these and set relationships
+and unique identifiers. For this purpose we will use the same principle of decisive and guiding parameters, but in this
+case they don't have to be common between datasets, but specific to the data set.
+
+
 
