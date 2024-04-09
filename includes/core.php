@@ -1,6 +1,7 @@
 <?php
 
 
+global $MYSQL_HOST, $MYSQL_USER, $MYSQL_PASS, $MYSQL_DB;
 require 'db.php';
 
 //echo $MYSQL_DB;
