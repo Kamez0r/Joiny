@@ -1,5 +1,9 @@
-<?php require "../includes/init.php"; ?>
+<?php
+    require '../includes/xcrud/xcrud.php';
+    require "../includes/init.php";
+    $xcrud = Xcrud::get_instance();
 
+?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
 <head>
@@ -65,23 +69,13 @@
                 </div>
             </div>
 
-<!--            <form class="col-lg-6">-->
-<!--                <div class="mb-3">-->
-<!--                    <label for="transactionName" class="form-label">Transaction Name</label>-->
-<!--                    <div class="input-group">-->
-<!---->
-<!--                        <input type="transactionName" class="form-control" id="transactionName" aria-describedby="transactionNameHelp">-->
-<!--                        <button class="btn btn-outline-secondary" type="button" id="transactionNameAuto">Auto</button>-->
-<!--                    </div>-->
-<!--                    <div id="transactionNameHelp" class="form-text">This is used to easily identify your transaction later.</div>-->
-<!--                </div>-->
-<!---->
-<!--                <div class="mb-3">-->
-<!--                    <label class="form-label" for="customFile">Upload</label>-->
-<!--                    <input type="file" class="form-control" id="customFile" accept=".csv">-->
-<!--                </div>-->
-<!--                <button type="submit" class="btn btn-primary">Submit</button>-->
-<!--            </form>-->
+            <?php
+
+
+
+            $xcrud->table('transactions');
+            echo $xcrud->render(); //magic
+            ?>
 
 
         </main>
