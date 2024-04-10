@@ -60,28 +60,28 @@
 
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">New Ingest Transaction</h1>
+                <h1 class="h2">Manage Transaction</h1>
                 <div class="btn-toolbar mb-2 mb-md-0">
                 </div>
             </div>
 
-            <form class="col-lg-6">
-                <div class="mb-3">
-                    <label for="transactionName" class="form-label">Transaction Name</label>
-                    <div class="input-group">
-
-                        <input type="transactionName" class="form-control" id="transactionName" aria-describedby="transactionNameHelp">
-                        <button class="btn btn-outline-secondary" type="button" id="transactionNameAuto">Auto</button>
-                    </div>
-                    <div id="transactionNameHelp" class="form-text">This is used to easily identify your transaction later.</div>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label" for="customFile">Upload</label>
-                    <input type="file" class="form-control" id="customFile" accept=".csv">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+<!--            <form class="col-lg-6">-->
+<!--                <div class="mb-3">-->
+<!--                    <label for="transactionName" class="form-label">Transaction Name</label>-->
+<!--                    <div class="input-group">-->
+<!---->
+<!--                        <input type="transactionName" class="form-control" id="transactionName" aria-describedby="transactionNameHelp">-->
+<!--                        <button class="btn btn-outline-secondary" type="button" id="transactionNameAuto">Auto</button>-->
+<!--                    </div>-->
+<!--                    <div id="transactionNameHelp" class="form-text">This is used to easily identify your transaction later.</div>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="mb-3">-->
+<!--                    <label class="form-label" for="customFile">Upload</label>-->
+<!--                    <input type="file" class="form-control" id="customFile" accept=".csv">-->
+<!--                </div>-->
+<!--                <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--            </form>-->
 
 
         </main>
